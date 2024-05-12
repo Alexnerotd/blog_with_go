@@ -23,3 +23,7 @@ func (r *BlogRepository) GetBlogById(id int) (*models.Blog, error) {
 
 	return &blog, nil
 }
+
+func (r *BlogRepository) CreateBlog(blog *models.Blog) error {
+	return r.DB.Create(blog).Error
+}

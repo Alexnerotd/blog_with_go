@@ -16,3 +16,7 @@ func NewBlogService(blogRepository *repositories.BlogRepository) *BlogService {
 func (s *BlogService) GetBlogById(id int) (*models.Blog, error) {
 	return s.blogRepository.GetBlogById(id)
 }
+
+func (s *BlogService) CreateBlog(blog *models.Blog) error {
+	return s.blogRepository.CreateBlog(blog)
+}

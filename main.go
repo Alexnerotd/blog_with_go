@@ -29,6 +29,7 @@ func main() {
 	router := gin.Default()
 
 	router.GET("/blog/:id", useHandler.GetBlogById)
+	router.POST("/blog", useHandler.CreateBlog)
 
 	router.Run(":8080")
 }
