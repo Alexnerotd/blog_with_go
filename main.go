@@ -7,7 +7,9 @@ import (
 	"alexnerotd/blog/services"
 	"alexnerotd/blog/utils"
 
+	"github.com/gin-contrib/cors"
 	"github.com/gin-gonic/gin"
+	"github.com/gin-gonic/gin/contrib/cors"
 )
 
 func main() {
@@ -27,6 +29,12 @@ func main() {
 	useHandler := handlers.NewBlogHandler(useService)
 
 	router := gin.Default()
+
+	router.Use(cors.New(cors.Config{
+		AllowAllOrigins: true,
+		AllowMethods:    []string{"GET", "POST"},
+		AllowHeaders:    []string{"Origin", "Content-Type"},
+	}))
 
 	router.GET("/blog/:id", useHandler.GetBlogById)
 	router.POST("/blog", useHandler.CreateBlog)
