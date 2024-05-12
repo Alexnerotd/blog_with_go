@@ -35,8 +35,6 @@ func ConnectDB() (*gorm.DB, error) {
 		panic(err.Error())
 	}
 
-	defer testDB.Close()
-
 	err = testDB.Ping()
 	if err != nil {
 		panic(err.Error())
