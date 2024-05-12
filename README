@@ -1,16 +1,16 @@
 # Blog with Golang
 
-This project is a APIRest using Go wich provides a simple crud for a personal blog
+This project is an APIRest using Go which provides a simple CRUD for a personal blog.
 
 ## Installation
 
 1. Clone this repository.
-2. Execute command "go mod tidy" in your folder root.
+2. Execute the command `go mod tidy` in the root folder.
 
 ## Start
 
-### Execute command "go run main.go" in your folder root.
+Execute the command `go run main.go` in the root folder.
 
-License
+## License
 
-This project is under License MIT - see the file License for more details.
+This project is under the MIT License - see the [LICENSE](LICENSE) file for more details.
